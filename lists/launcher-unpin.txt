@@ -1,0 +1,6 @@
+# Type: list, Format: command-name or filename in /usr/share/applications/
+firefox
+libreoffice-writer
+org.gnome.Software
+unity-control-center
+yelp

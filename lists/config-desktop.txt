@@ -1,0 +1,5 @@
+# Type: array, Format: key property value
+com.canonical.Unity.Lenses remote-content-search none
+org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
+org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
+org.gnome.desktop.privacy remember-recent-files false

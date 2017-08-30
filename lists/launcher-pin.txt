@@ -1,0 +1,4 @@
+# Type: list, Format: command-name or filename in /usr/share/applications/
+gnome-terminal
+google-chrome
+skypeforlinux

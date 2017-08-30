@@ -1,0 +1,5 @@
+# Type: list, Format: pkg-name
+git
+htop
+vim
+rar

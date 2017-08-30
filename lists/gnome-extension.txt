@@ -1,0 +1,5 @@
+# Type: list, Format: link-to-the-extension
+https://extensions.gnome.org/extension/7/removable-drive-menu/
+https://extensions.gnome.org/extension/15/alternatetab/
+https://extensions.gnome.org/extension/826/suspend-button/
+https://extensions.gnome.org/extension/1031/topicons/

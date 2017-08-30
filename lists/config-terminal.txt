@@ -1,0 +1,4 @@
+# Type: array, Format: key value
+use-theme-colors false
+foreground-color 'rgb(170,170,170)'
+background-color 'rgb(0,0,0)'

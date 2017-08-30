@@ -1,0 +1,26 @@
+if has('vim_starting')
+    set nocompatible
+endif
+
+if exists('\$SHELL')
+    set shell=\$SHELL
+else
+    set shell=/bin/sh
+endif
+
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+
+set backspace=indent,eol,start
+syntax on
+set tabstop=4
+set ruler
+set hlsearch
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/

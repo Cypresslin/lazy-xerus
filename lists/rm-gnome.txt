@@ -1,0 +1,9 @@
+# Gnome Ubuntu specific packages. Type: list, Format: pkg-name
+empathy
+evolution
+libevolution
+gnome-getting-started-docs
+gnome-photos
+gnome-maps
+gnome-music
+libgnome-games-support-common

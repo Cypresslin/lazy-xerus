@@ -1,0 +1,3 @@
+# Type: array, Format: ime pkg-name
+fcitx fcitx-anthy
+fcitx fcitx-chewing

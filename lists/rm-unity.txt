@@ -1,0 +1,9 @@
+# Unity Ubuntu specific packages. Type: list, Format: pkg-name
+account-plugin-facebook
+account-plugin-flickr
+account-plugin-google
+remmina
+shotwell
+thunderbird
+vino
+webbrowser-app

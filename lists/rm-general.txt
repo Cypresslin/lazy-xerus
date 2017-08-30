@@ -1,0 +1,8 @@
+# Package the exist in both Gnome / Unity Ubuntu. Type: list, Format: pkg-name
+aisleriot
+gnome-mahjongg
+gnome-mines
+gnome-orca
+gnome-sudoku
+rhythmbox
+transmission-common

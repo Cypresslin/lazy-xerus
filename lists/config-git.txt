@@ -1,0 +1,8 @@
+# Type: array, Format: key value (Use $GITNAME and $GITMAIL for user-input)
+user.name $GITNAME
+user.email $GITMAIL
+alias.br branch
+alias.co checkout
+alias.cp cherry-pick
+alias.df diff
+alias.st status

@@ -1,0 +1,4 @@
+# Type: array, Format: executable-command deb-link
+dropbox https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb
+skypeforlinux https://go.skype.com/skypeforlinux-64.deb
+google-chrome https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
