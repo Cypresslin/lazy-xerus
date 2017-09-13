@@ -3,7 +3,7 @@ The goal of this script is to make people's (especially mine) life easier after
 installing Ubuntu.
 
 ## How to use?
-1. Download the tarball, or the source from https://github.com/Cypresslin/lazy-xerus/
+1. Download the [ZIP archive](https://github.com/Cypresslin/lazy-xerus/archive/master.zip), or the source from https://github.com/Cypresslin/lazy-xerus/
 2. Change the content of those txt files in the lists/ directory accordingly
 3. Run `bash ./lazy-xerus` and answer to some questions
 4. _(:3 」∠)_
