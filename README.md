@@ -1,12 +1,11 @@
-# Lazyiness is humanity
-The goal of this script is to make people's (especially mine) life easier after
-installing Ubuntu.
+# Lazy-Xerus - Lazyiness is humanity
+The goal of this script is to make people's (especially mine) life easier after installing Ubuntu.
 
 ## How to use?
 1. Download the [ZIP archive](https://github.com/Cypresslin/lazy-xerus/archive/master.zip), or the source from https://github.com/Cypresslin/lazy-xerus/
 2. Change the content of those txt files in the lists/ directory accordingly
 3. Run `bash ./lazy-xerus` and answer to some questions
-4. _(:3 」∠)_
+4. ＿(:3 」∠)＿
 
 ## What can this script do for you?
 * Install all the tools you want, from IME to multimedia plugins, and even third-party tools like Google Chrome, Skype
@@ -19,4 +18,4 @@ You can change these anytime from the txt files in lists/ directory
 
 ## Why Xerus?
 Xenial Xerus, which is the latest Ubuntu LTS version for now.
-And... I am too lazy to get a better name for it. _(:3 」∠)_
+And... I am too lazy to get a better name for it. ＿(:3 」∠)＿
