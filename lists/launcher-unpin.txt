@@ -4,3 +4,4 @@ libreoffice-writer
 org.gnome.Software
 unity-control-center
 yelp
+ubuntu-amazon-default

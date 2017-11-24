@@ -147,7 +147,7 @@ function env_check() {
 
     if [ "$DESKTOP_SESSION" == "gnome" ]; then
         PKG_RM="$PKG_RM $RM_GNOME"
-    else
+    else  # including 17.10, in which DESKTOP_SESSION=ubuntu but gnome-shell also exist
         PKG_RM="$PKG_RM $RM_UNITY"
     fi
     # check network connection here
@@ -228,7 +228,8 @@ function change_shortcuts() {
     local target=''
     local newapp=''
 
-    if [ "$DESKTOP_SESSION" == "gnome" ]; then
+    command -v gnome-shell &> /dev/null
+    if [ $? -eq 0 ]; then  # Not checking DESKTOP_SESSION for 17.10
         local list=`gsettings get org.gnome.shell favorite-apps | sed 's/[][]//g'`
     else
         local list=`gsettings get com.canonical.Unity.Launcher favorites | sed 's/[][]//g'`
@@ -269,7 +270,8 @@ function change_shortcuts() {
     newapp=`echo "$newapp" | sed 's/,$//'`
     newlist="[$list, $newapp]"
 
-    if [ "$DESKTOP_SESSION" == "gnome" ]; then
+    command -v gnome-shell &> /dev/null
+    if [ $? -eq 0 ]; then  # Not checking DESKTOP_SESSION for 17.10
         gsettings set org.gnome.shell favorite-apps "$newlist"
     else
         gsettings set com.canonical.Unity.Launcher favorites "$newlist"
@@ -306,8 +308,8 @@ function configuration() {
             prop=`echo ${GIT_CONFIGS[count]} | awk {'print $1'}`
             value=`echo ${GIT_CONFIGS[count]} | awk {'print $2'}`
             # Stupid way to use the user-defined variable
-            [ "$value" == "\$GITNAME" ] value="$GITNAME"
-            [ "$value" == "\$GITMAIL" ] value="$GITMAIL"
+            [ "$value" == "\$GITNAME" ] && value="$GITNAME"
+            [ "$value" == "\$GITMAIL" ] && value="$GITMAIL"
             git config --global "$prop" "$value"
             count=$(( $count + 1 ))
         done
@@ -370,19 +372,26 @@ function config_ime() {
     fi
 }
 
-
+opt=$1
+[ "$opt" == "--step" ] && step=true || step=false
 if [ ! -f $TMPFILE ]; then
     # first run
     init
     env_check
     echo "Removing unwanted packages"
+    [ $step == 'true' ] && read -p "Hit enter to continue"
     pkgs_rm
     echo "Installing assigned packages"
+    [ $step == 'true' ] && read -p "Hit enter to continue"
     pkgs_inst
+    echo "Changing launcher items"
+    [ $step == 'true' ] && read -p "Hit enter to continue"
     change_shortcuts
     echo "Configuring your system"
+    [ $step == 'true' ] && read -p "Hit enter to continue"
     configuration
     echo "Configuring your IME"
+    [ $step == 'true' ] && read -p "Hit enter to continue"
     config_ime
 else
     # second run
