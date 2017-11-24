@@ -150,6 +150,9 @@ function env_check() {
     else
         PKG_RM="$PKG_RM $RM_UNITY"
     fi
+    # check network connection here
+    nc -z 8.8.8.8 53 &>/dev/null
+    [ $? -ne 0 ] && echo "No network connection!" && exit 1
 }
 
 # ---- Remove unwanted packages ----
