@@ -13,8 +13,19 @@ The goal of this script is to make people's (especially mine) life easier after 
 * Pin / unpin applications from the launcher
 * Remove unwanted softwares
 * Change your terminal / GIT / Desktop configuration
+* Upgrade your system, install proprietary drivers
 
 You can change these anytime from the txt files in lists/ directory
+
+## Note for installing third-party softwares
+You might see some error message while install the third-party softwares:
+
+    dpkg: dependency problems prevent configuration of google-chrome-stable
+
+    dpkg: error processing package google-chrome-stable (--install):
+    dependency problems - leaving unconfigured
+
+This is harmless, and will be fixed by a `apt install -f` command later in the scrip.
 
 ## Why Xerus?
 Xenial Xerus, which is the latest Ubuntu LTS version for now.
