@@ -41,6 +41,7 @@ function init() {
     # Check if it's a second run
     if [ -f $TMPFILE ]; then
         reader "$dir/inst-input-method.txt"
+        # Only need one line result here, so use an array
         INPUT_METHOD=("${data[@]}")
         return
     fi
@@ -50,7 +51,7 @@ function init() {
     UTILITIES="${data[@]}"
 
     reader "$dir/inst-input-method.txt"
-    INPUT_METHOD=("${data[@]}")
+    INPUT_METHOD="${data[@]}"
 
     reader "$dir/inst-multimedia.txt"
     MULTIMEDIA="${data[@]}"
