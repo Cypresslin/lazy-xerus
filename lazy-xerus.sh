@@ -357,10 +357,10 @@ function config_ime() {
 
     # Enable fcitx wrappers if selected
     if [ -f $TMPFILE ]; then
-        echo $INPUT_METHOD | grep 'fcitx' &> /dev/null
+        echo ${INPUT_METHOD[@]} | grep 'fcitx' &> /dev/null
         if [ $? -eq 0 ]; then
             if [ -f $HOME/.config/fcitx/profile ]; then
-                for item in $INPUT_METHOD
+                for item in ${INPUT_METHOD[@]}
                 do
                     target=`echo $item | sed 's/fcitx-//'`
                     sed -i "s/$target:False/$target:True/" $HOME/.config/fcitx/profile
