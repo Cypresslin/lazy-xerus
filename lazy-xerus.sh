@@ -87,8 +87,9 @@ function init() {
         if [ $? -ne 0 ]; then
             yn="Y"
             echo "ibus was not detected in inst-input-method.txt"
-            read -p "Do you want to remove ibus, the default input method? (Y/n): " yn
-            [ "$yn" != "n" ] && RM_GENERAL="$RM_GENERAL ibus ibus-gtk ibus-gtk3"
+            echo "Do you want to remove ibus, the default input method?"
+            read -p "WARNING - remove ibus might get ubuntu-desktop removed (N/y): " yn
+            [ "$yn" == "y" ] && RM_GENERAL="$RM_GENERAL ibus ibus-gtk ibus-gtk3"
         fi
     fi
 
@@ -400,4 +401,5 @@ else
     echo "Configuring your IME"
     config_ime
     rm $TMPFILE
+    echo "All DONE, enjoy!"
 fi
