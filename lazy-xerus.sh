@@ -75,9 +75,12 @@ function init() {
     # Ask user to remove basero if the optical drive does not exist
     if [ ! -b /dev/sr0 ]; then
         yn="Y"
-        echo "Optical drive /dev/sr0 not detected"
-        read -p "Do you want to remove brasero, the CD/DVD burning tool? (Y/n): " yn
-        [ "$yn" != "n" ] && RM_GENERAL="$RM_GENERAL brasero-common"
+        dpkg -s brasero &> /dev/nill
+        if [ $? -eq 0 ]; then
+            echo "Optical drive /dev/sr0 not detected"
+            read -p "Do you want to remove brasero, the CD/DVD burning tool? (Y/n): " yn
+            [ "$yn" != "n" ] && RM_GENERAL="$RM_GENERAL brasero-common"
+        fi
     fi
 
     # Ask user to remove the default ibus IME if other IME selected
