@@ -6,3 +6,4 @@ gnome-orca
 gnome-sudoku
 rhythmbox
 transmission-common
+ubuntu-web-launchers
