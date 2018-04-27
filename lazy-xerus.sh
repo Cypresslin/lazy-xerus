@@ -75,7 +75,7 @@ function init() {
     # Ask user to remove basero if the optical drive does not exist
     if [ ! -b /dev/sr0 ]; then
         yn="Y"
-        dpkg -s brasero &> /dev/nill
+        dpkg -s brasero &> /dev/null
         if [ $? -eq 0 ]; then
             echo "Optical drive /dev/sr0 not detected"
             read -p "Do you want to remove brasero, the CD/DVD burning tool? (Y/n): " yn
