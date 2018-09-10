@@ -1,4 +1,4 @@
-# Lazy-Xerus - Lazyiness is humanity
+# Lazy-Xerus - Laziness is humanity
 The goal of this script is to make people's (especially mine) life easier after installing Ubuntu.
 
 ## How to use?
@@ -9,23 +9,23 @@ The goal of this script is to make people's (especially mine) life easier after 
 
 ## What can this script do for you?
 * Install all the tools you want, from IME to multimedia plugins, and even third-party tools like Google Chrome, Skype
-* Installl extensions for Gnome
+* Install extensions for Gnome
 * Pin / unpin applications from the launcher
-* Remove unwanted softwares
+* Remove unwanted software
 * Change your terminal / GIT / Desktop configuration
 * Upgrade your system, install proprietary drivers
 
 You can change these anytime from the txt files in lists/ directory
 
-## Note for installing third-party softwares
-You might see some error message while install the third-party softwares:
+## Note for installing third-party software
+You might see some error message while install the third-party software:
 
     dpkg: dependency problems prevent configuration of google-chrome-stable
 
     dpkg: error processing package google-chrome-stable (--install):
     dependency problems - leaving unconfigured
 
-This is harmless, and will be fixed by a `apt install -f` command later in the scrip.
+This is harmless, and will be fixed by a `apt install -f` command later in the script.
 
 ## Why Xerus?
 Xenial Xerus, which is the latest Ubuntu LTS version for now.
