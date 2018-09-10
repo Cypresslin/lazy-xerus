@@ -355,7 +355,11 @@ function config_ime() {
         echo "You will have to logout for the input method, run this script again later."
         echo "Script terminates now"
         touch $TMPFILE
-        gnome-session-quit
+        if command -v gnome-session-quit &> /dev/null; then
+            gnome-session-quit
+        else
+            echo "gnome-session-quit was not found, please logout from the system menu"
+        fi
         exit
     fi
 
