@@ -377,8 +377,32 @@ function config_ime() {
     fi
 }
 
-opt=$1
-[ "$opt" == "--step" ] && step=true || step=false
+function help_msg {
+    echo "Usage: $0 [-s]"
+    echo -e "\t-h : Print this help message and exit."
+    echo -e "\t-s : Run this script step by step."
+}
+
+
+step=false
+while getopts :sh opt; do
+  case $opt in
+    s)
+      echo "Run this script step by step."
+      step=true
+      ;;
+    h)
+      help_msg
+      exit
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG"
+      help_msg
+      exit
+      ;;
+  esac
+done
+
 if [ ! -f $TMPFILE ]; then
     # first run
     init
